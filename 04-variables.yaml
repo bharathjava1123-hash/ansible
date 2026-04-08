@@ -1,10 +1,10 @@
 - name: variables passing
   hosts: web
   vars:
-   NAME: bharath
+   NAME: Bharath
    ADDRESS: Hyderabad
    MOBILE: 123456789
   tasks:
   - name: variables passing
     ansible.builtin.debug:
-     msg: "I am {{BHARATH}}, my address {{ADDRESS}}, my mobile no {{MOBILE}}"
+     msg: "I am {{NAME}}, my address {{ADDRESS}}, my mobile no {{MOBILE}}"
