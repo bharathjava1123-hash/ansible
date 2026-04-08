@@ -1,0 +1,8 @@
+- name: print the message
+  hosts: web 
+  tasks:
+   - name: print the message
+     ansible.builtin.debug:
+      msg: "this is bharath"
+     
+  
