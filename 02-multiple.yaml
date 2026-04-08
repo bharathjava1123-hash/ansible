@@ -3,6 +3,13 @@
   tasks:
    - name: print the message
      ansible.builtin.debug:
-      msg: "this is bharath"
+      msg: "this is bharath from play 01"
+
+- name: print the message
+  hosts: web 
+  tasks:
+   - name: print the message
+     ansible.builtin.debug:
+      msg: "this is bharath from play 02"
      
   
