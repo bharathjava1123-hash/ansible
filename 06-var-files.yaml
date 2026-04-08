@@ -1,0 +1,8 @@
+- name: variables passing
+  hosts: web
+  vars_files:
+   vars.yaml
+  tasks:
+  - name: variables passing
+    ansible.builtin.debug:
+     msg: "I am {{NAME}}, my address {{ADDRESS}}, my mobile no {{MOBILE}}"
