@@ -1,6 +1,6 @@
 - name: ping the server
-  hosts: 
+  hosts: web
   tasks: 
   - name: ping the server
-    anisble.buildin.ping:
+    anisble.builtin.ping:
 
