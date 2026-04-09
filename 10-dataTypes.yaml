@@ -15,5 +15,5 @@
     - IAM
   tasks:
    - name: Data Types
-     ansible.builtIn.debug:
+     ansible.builtin.debug:
       msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
