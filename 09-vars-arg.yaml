@@ -4,3 +4,7 @@
   - name: variables passing inventory
     ansible.builtin.debug:
      msg: "I am {{NAME}}, my address {{ADDRESS}}, my mobile no {{MOBILE}}"
+
+
+
+#ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 09-vars-arg.yaml -e "NAME=Kumar ADDRESS=Durga nagar MOBILE=1234567890"
