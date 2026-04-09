@@ -10,9 +10,13 @@
     - dockers
    live: true
    tools:
-    - ec2
-    - s3
-    - IAM
+    ci: jenkins
+    cm: ansible
+    cloud: aws
+    tools:
+     - ec2
+     - iam
+     - s3
   tasks:
    - name: Data Types
      ansible.builtin.debug:
