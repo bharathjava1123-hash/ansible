@@ -1,12 +1,12 @@
 - name: variables passing
   hosts: web
   vars_prompt:
-   name: NAME
-   prompt: please enter the name
-   name: ADDRESS
-   prompt: please enter the address
-   name: MOBILE
-   prompt: please enter the MOBILE
+  - name: NAME
+    prompt: please enter the name
+  - name: ADDRESS
+    prompt: please enter the address
+  - name: MOBILE
+    prompt: please enter the MOBILE
   tasks:
   - name: variables passing
     ansible.builtin.debug:
