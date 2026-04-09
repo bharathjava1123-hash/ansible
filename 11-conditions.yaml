@@ -9,3 +9,8 @@
     ansible.builtin.debug:
      msg: "the given number {{mynumber}} is getter then 10"
     when: mynumber | int > 10
+  
+  - name: conditions
+    ansible.builtin.debug:
+     msg: "the given number {{mynumber}} is less then 10"
+    when: mynumber | int <= 10
