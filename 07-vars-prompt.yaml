@@ -3,10 +3,13 @@
   vars_prompt:
   - name: NAME
     prompt: please enter the name
+    private: false
   - name: ADDRESS
     prompt: please enter the address
+    private: false
   - name: MOBILE
     prompt: please enter the MOBILE
+    private: false
   tasks:
   - name: variables passing
     ansible.builtin.debug:
