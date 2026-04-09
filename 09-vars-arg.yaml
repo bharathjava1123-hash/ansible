@@ -1,0 +1,6 @@
+- name: variables passing from inventory
+  hosts: web
+  tasks:
+  - name: variables passing inventory
+    ansible.builtin.debug:
+     msg: "I am {{NAME}}, my address {{ADDRESS}}, my mobile no {{MOBILE}}"
