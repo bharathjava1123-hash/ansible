@@ -4,7 +4,7 @@
   - name: loops
     ansible.builtin.package:
      name: "{{ item.name }}"
-     stae: "{{ item.state }}"
+     state: "{{ item.state }}"
     loop:
     - { name: 'nginx', state: 'present'}
     - { name: 'mysql', state: 'absent'}
