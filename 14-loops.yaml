@@ -1,12 +1,13 @@
 - name: loops demo
   hosts: web
   tasks: 
-   - name: loops demo
-     ansible.builtin.package:
-      name: "{{ item }}""
-      state: present
-     loop:
-     - nginx
-     - mysql
-     - httpd
+  - name: loops
+    ansible.builtin.package:
+     name: {{ item }}
+     state: present
+    loop:
+    - mysql
+    - httpd
+    - postfix
+    - nginx
      
