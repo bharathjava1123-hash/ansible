@@ -8,9 +8,17 @@
 
   - name: upper case
     ansible.builtin.debug:
-     msg: "hello {{ 'bharath' | upper}}"
+     msg: "hello {{ 'bharath' | upper }}"
 
-  - name: lowe case
+  - name: lower case
     ansible.builtin.debug:
-     msg: "hello {{ 'BHARATH' | lower}}"
+     msg: "hello {{ 'BHARATH' | lower }}"
+
+  - name: get the unique values
+    vars:
+      NUMBER: [1,2,3,4,4,5,5,6,7,7]
+    ansible.builtin.debug:
+     msg: "hello {{ NUMBER | unique }}"
+
+
  
