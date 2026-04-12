@@ -1,0 +1,8 @@
+- name: demo on filters/functions
+  hosts: local
+  connection: local
+  tasks:
+  - name: default variables
+    ansible.builtin.debug:
+     msg: "hello {{ NAME | default('Bharath')}}"
+ 
