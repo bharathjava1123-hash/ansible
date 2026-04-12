@@ -6,9 +6,10 @@
    sg_id: "sg-0119183069a075101"
    ami_id: "ami-0220d79f3f480ecf5"
    instances:
-    - mysql
-    - backend
-    - frontend
+   - mysql
+   - backend
+   - frontend
+   zone: bharath.bond
   tasks:
   - name: ansible to install boto3 and botocore
     ansible.builtin.pip:
@@ -30,3 +31,28 @@
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ ec2_instances }}"
+
+  - name: create r53 private records
+    amazon.aws.route53:
+     name: present
+     zone: "{{ zone }}"
+     record: "{{ item.tem}}.{{ zone }}"
+     type: A
+     ttl: 1
+     value: "{{ item.instances[0].private_ip_address }}"
+     wait: true
+     overwrite: true
+    loop: "{{ ec2_instances.results }}"
+
+  - name: create r53 public records
+    amazon.aws.route53:
+     name: present
+     zone: "{{ zone }}"
+     record: "{{ item.tem}}.{{ zone }}"
+     type: A
+     ttl: 1
+     value: "{{ item.instances[0].public_ip_address }}"
+     wait: true
+     overwrite: true
+    loop: "{{ ec2_instances.results }}"
+    when item.item == "frontend"
