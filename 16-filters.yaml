@@ -5,4 +5,12 @@
   - name: default variables
     ansible.builtin.debug:
      msg: "hello {{ NAME | default('Bharath')}}"
+
+  - name: upper case
+    ansible.builtin.debug:
+     msg: "hello {{ bharath | upper}}"
+
+  - name: lowe case
+    ansible.builtin.debug:
+     msg: "hello {{ BHARATH | lower}}"
  
