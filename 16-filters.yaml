@@ -37,8 +37,8 @@
   - name: convert List to Map
     vars:
      Info:
-     - { "Key": "Name","value": "Bharath" }
-     - { "key": "Address","value": "Hydetabad" }
+     - { "key": "Name","value": "Bharath" }
+     - { "key": "Address","value": "Hyderabad" }
      - { "key": "Course","value": "DevOps with AWS" }
     ansible.builtin.debug:
      msg: "{{ Info | items2dict }}"
