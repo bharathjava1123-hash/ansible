@@ -34,7 +34,7 @@
 
   - name: create r53 private records
     amazon.aws.route53:
-     name: present
+     state: present
      zone: "{{ zone }}"
      record: "{{ item.tem}}.{{ zone }}"
      type: A
