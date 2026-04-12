@@ -27,12 +27,21 @@
      msg: "the max value is : {{ NUMBER | max }}, the min value is : {{ NUMBER | min }}"
 
 
-  - name: convert map to list
+  - name: convert Map to List
     vars:
      Info:
       NAME: Bharath
       ADRRESS: Hydetabad
     ansible.builtin.debug:
      msg: "{{ Info | dict2items }}"
+
+  - name: convert List to Map
+    vars:
+     Info:
+    - { Name:Bharath, Adress:Hyderabad }
+    - { Name:kumar, Adress:Amberpet }
+    - { Name:nagunuri, Adress:Alicafe }
+    ansible.builtin.debug:
+     msg: "{{ Info | items2dict }}"
 
  
