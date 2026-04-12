@@ -38,9 +38,9 @@
   - name: convert List to Map
     vars:
      Info:
-    - { Name:Bharath, Adress:Hyderabad }
-    - { Name:kumar, Adress:Amberpet }
-    - { Name:nagunuri, Adress:Alicafe }
+     - { Name:Bharath, Adress:Hyderabad }
+     - { Name:kumar, Adress:Amberpet }
+     - { Name:nagunuri, Adress:Alicafe }
     ansible.builtin.debug:
      msg: "{{ Info | items2dict }}"
 
