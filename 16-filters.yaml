@@ -24,6 +24,15 @@
     vars:
       NUMBER: [1,2,3,4,44,5,55,6,77,7]
     ansible.builtin.debug:
-     msg: "the max is : {{ NUMBER | max }}, the min is : {{ NUMBER | min }}"
+     msg: "the max value is : {{ NUMBER | max }}, the min value is : {{ NUMBER | min }}"
+
+
+  - name: convert map to list
+    vars:
+     Info:
+      NAME: Bharath
+      ADRRESS: Hydetabad
+    ansible.builtin.debug:
+     msg: "{{ Info | dict2items }}"
 
  
