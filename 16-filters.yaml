@@ -26,7 +26,6 @@
     ansible.builtin.debug:
      msg: "the max value is : {{ NUMBER | max }}, the min value is : {{ NUMBER | min }}"
 
-
   - name: convert Map to List
     vars:
      Info:
@@ -38,8 +37,9 @@
   - name: convert List to Map
     vars:
      Info:
-     - { "Key": "Name", "value": "Bharath" }
-     - { "key": "Address", "value": "Hydetabad" }
+     - { "Key": "Name","value": "Bharath" }
+     - { "key": "Address","value": "Hydetabad" }
+     - { "key": "Course","value": "DevOps with AWS" }
     ansible.builtin.debug:
      msg: "{{ Info | items2dict }}"
 
